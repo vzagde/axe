@@ -176,6 +176,35 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	text-transform:uppercase;
 }
 
+.confirm_text{
+	font-family: 'bebas_neueregular';
+	font-size: 35px;
+    margin-top: 16%;
+	color:#ffffff;
+	text-align:center;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+
+.confirm_a{
+	font-family: 'bebas_neueregular';
+	font-size: 25px;
+    color:#c5a476;
+	border:2px solid #c5a476;
+	text-align:center;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	margin: 0 auto;
+    display: table;
+    margin-top: 5%;
+	padding:2% 3%; 
+}
+
+.confirm_a:hover{
+	background:#c5a476;
+	color:#333333;
+}
+
 .ready_box{
 	width: 224px;
     z-index: 3;
@@ -892,19 +921,22 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 .q9_thumb_img{
 	margin:auto;
-	-webkit-transition: 0.2s; 
-    transition: 0.2s;
+	border:5px solid #000;
+	-webkit-transition: 0.3s; 
+    transition: 0.3s;
 }
 
 .q9_img_animte{
-	-webkit-transition: 0.2s ;
-    transition: 0.2s;
+	-webkit-transition: 0.3s ;
+    transition: 0.3s;
 	border:5px solid #c5a476;
 	-ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-	margin-bottom: 12px;
-    margin-top: -15px;
+	/* margin-bottom: 12px;
+    margin-top: -15px; */
+	margin-bottom: 15px;
+    margin-top: -10px;
 }
 
 .rope_hanger_box{
@@ -1089,6 +1121,27 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	float:right;
 }
 
+.mini_bg1{
+	background:url(../images/q10_thumb1.png) no-repeat;
+	background-size:cover;
+	background-position: left;
+}
+
+.mini_bg2{
+	background:url(../images/q10_thumb2.png) no-repeat;
+	background-size:cover;
+}
+
+.mini_bg3{
+	background:url(../images/q10_thumb3.png) no-repeat;
+	background-size:cover;
+}
+
+.mini_bg4{
+	background:url(../images/q10_thumb4.png) no-repeat;
+	background-size:cover;
+}
+
 .mini_circle{
 	width:62px;
 	height:62px;
@@ -1159,8 +1212,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 .axe_signature{
-	position:absolute;
-	bottom:0;
+	/* position:absolute;
+	bottom:0; */
+	position: relative;
+    bottom: 500px;
 	left:3%;
 }
 
@@ -1172,10 +1227,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	letter-spacing:1px;
 	border:2px solid #c5a476;
 	padding:1.5% 4%;
-	position:absolute;
+	/* position:absolute;
 	top:6%;
-	right:3%;
-	
+	right:3%; */
+	float: right;
+    margin-top: -9%;
+    margin-right: 3%;
 }
 
 .form_sub{
@@ -1216,7 +1273,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 .form_inpt1{
 	padding: 16%;
-    width: 54%;
+    width: 66%;
     margin: 0 8%;
 }
 
@@ -1485,7 +1542,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	animation: dash 5s 1s linear alternate infinite; */
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 0;
-	animation: dash 7s 0s linear;
+	animation: dash 2s 0s linear;
 }
 
 @keyframes dash {
@@ -1501,7 +1558,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 .path1 {
   stroke-dasharray: 3000;
   stroke-dashoffset: 0;
-  animation: dash1 5s 0s linear;
+  animation: dash1 3s 0s linear;
 }
 
 @keyframes dash1 {
@@ -1795,6 +1852,35 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
 
+.loading_ring {
+    border: 2px solid #fff;
+	background: rgba(155,155,155,0.93);
+    -webkit-border-radius: 40px;
+    height: 20px;
+    width: 20px;
+	float: left;
+    margin:2% 1%;
+    -webkit-animation: pulsate1 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+
+.lr1{
+	-webkit-animation: pulsate1 1s 1s ease-out;
+	-webkit-animation-iteration-count: infinite; 
+}
+
+.lr2{
+	-webkit-animation: pulsate1 1s 2s ease-out;
+	-webkit-animation-iteration-count: infinite; 
+}
+
+@-webkit-keyframes pulsate1 {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
 .slick-prev, .slick-next {
     width: 40px;
     height: 54px;
@@ -1843,6 +1929,20 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     position: absolute;
     left: 4%;
     top: 21%;
+}
+
+.confirm_box{
+	width: 515px;
+    height: 285px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    border: 5px solid #c5a476;
+    z-index: 9;
 }
 
 

@@ -146,14 +146,14 @@ $$(document).on('pageInit', function (e) {
 		$('.tlt').textillate();
 	})
 	
-	$('.question_text,.ans_text1').animate({top:"0%" , opacity:"1"}, 700);
+	$('.question_text,.ans_text1').animate({top:"0%" , opacity:"1"}, 1000);
 	
 	
-	$('.dotted_border_box1').delay('500').animate({width:"22%"}, 1000, function(){
+	$('.dotted_border_box1').delay('500').animate({width:"22%"}, 500, function(){
 		$('.dotted_border_box2').animate({height:"6%"}, 500, function(){
-			$('.dotted_border_box3').animate({height:"46%"}, 2000, function(){
-				$('.dotted_border_box4').animate({width:"91%"}, 2000, function(){
-					$('.dotted_border_box5').animate({height:"8%"}, 1000);
+			$('.dotted_border_box3').animate({height:"46%"}, 700, function(){
+				$('.dotted_border_box4').animate({width:"91%"}, 700, function(){
+					$('.dotted_border_box5').animate({height:"8%"}, 300);
 				});
 			});
 		});
@@ -167,7 +167,7 @@ $$(document).on('pageInit', function (e) {
 	
 	
 	
-	$('.number_box').delay('500').animate({top:"-7%"}, 500);
+	$('.number_box').delay('500').animate({top:"-7%"}, 800);
 	$('.q4_animate1').delay('300').fadeIn('slow');
 	$('.q4_slide1').delay('300').animate({left:"5%"}, 500);
 	$(".circle").delay('500').animate({width:'80px', height:'80px'},1000, function(){
@@ -262,36 +262,80 @@ $$(document).on('pageInit', function (e) {
 			containment: "parent",
 			grid: [ 210,101 ],
 			drag: function(){
-
 			}
-			
 		});
 	} );
-	
+
+	$('.q4_drop').click(function(){
+		var leftposition = Number($(this).css("left").replace('px', ''));
+		console.log(leftposition);
+		if(leftposition == 0){
+			$("#draggable1").animate({
+				left: '0px'
+			})
+			ans4 = 'Yoga';
+			$('.q4_slide_sub_box').fadeOut();
+			$(".circle").delay('500').animate({width:'0', height:'0'});
+			$('.q4_text').fadeOut();
+			$('.q4_animate1').delay('300').fadeIn('slow');
+			$(".c1").delay('500').animate({width:'80px', height:'80px'},700, function(){
+				$('.qt1').fadeIn('slow');
+			});
+		} else if(leftposition == 210) {
+			$("#draggable1").animate({
+				left: '210px'
+			})
+			ans4 = 'Gym';
+			$('.q4_slide_sub_box').fadeOut();
+			$(".circle").delay('500').animate({width:'0', height:'0'});
+			$('.q4_text').fadeOut();
+			
+			$('.q4_animate2').delay('300').fadeIn('slow');
+			$(".c2").delay('500').animate({width:'80px', height:'80px'},700, function(){
+				$('.qt2').fadeIn('slow');
+			});
+		} else if(leftposition == 420) {
+			$("#draggable1").animate({
+				left: '420px'
+			})
+			ans4 = 'Zumba';
+			$('.q4_slide_sub_box').fadeOut();
+			$(".circle").delay('500').animate({width:'0', height:'0'});
+			$('.q4_text').fadeOut();
+			
+			$('.q4_animate3').delay('300').fadeIn('slow');
+			$(".c3").delay('500').animate({width:'80px', height:'80px'},700, function(){
+				$('.qt3').fadeIn('slow');
+			});
+		} else if(leftposition == 630){
+			$("#draggable1").animate({
+				left: '630px'
+			})
+			ans4 = 'Shower';
+			$('.q4_slide_sub_box').fadeOut();
+			$(".circle").delay('500').animate({width:'0', height:'0'});
+			$('.q4_text').fadeOut();
+			
+			$('.q4_animate4').delay('300').fadeIn('slow');
+			$(".c4").delay('500').animate({width:'80px', height:'80px'},700, function(){
+				$('.qt4').fadeIn('slow');
+			});
+		}
+	})
+
 	$('.q4_drop').droppable({
-
 		drop: function(e, ui) {
-
-			// alert('dropped');
-
 			var leftposition = Number($('.grag_slide1').css('left').replace('px', ''));
-			console.log(leftposition);
-
 			if(leftposition >= 0 && leftposition <= 100){
-				
-
 				ans4 = 'Yoga';
 				$('.q4_slide_sub_box').fadeOut();
 				$(".circle").delay('500').animate({width:'0', height:'0'});
 				$('.q4_text').fadeOut();
-				
 				$('.q4_animate1').delay('300').fadeIn('slow');
 				$(".c1").delay('500').animate({width:'80px', height:'80px'},700, function(){
 					$('.qt1').fadeIn('slow');
 				});
-				
 			} else if(leftposition >= 100 && leftposition <= 300) {
-				
 				ans4 = 'Gym';
 				$('.q4_slide_sub_box').fadeOut();
 				$(".circle").delay('500').animate({width:'0', height:'0'});
@@ -301,10 +345,7 @@ $$(document).on('pageInit', function (e) {
 				$(".c2").delay('500').animate({width:'80px', height:'80px'},700, function(){
 					$('.qt2').fadeIn('slow');
 				});
-			
 			} else if(leftposition >= 300 && leftposition <= 500) {
-				
-				
 				ans4 = 'Zumba';
 				$('.q4_slide_sub_box').fadeOut();
 				$(".circle").delay('500').animate({width:'0', height:'0'});
@@ -314,9 +355,7 @@ $$(document).on('pageInit', function (e) {
 				$(".c3").delay('500').animate({width:'80px', height:'80px'},700, function(){
 					$('.qt3').fadeIn('slow');
 				});
-				
 			} else if(leftposition >= 500){
-				
 				ans4 = 'Shower';
 				$('.q4_slide_sub_box').fadeOut();
 				$(".circle").delay('500').animate({width:'0', height:'0'});
@@ -326,12 +365,17 @@ $$(document).on('pageInit', function (e) {
 				$(".c4").delay('500').animate({width:'80px', height:'80px'},700, function(){
 					$('.qt4').fadeIn('slow');
 				});
-				
 			}
 		}
 	});
 
-	
+	$(".confirm_a").click(function(){
+		$(".confirm_box").fadeOut();
+	})
+
+	$(".confirm_a_form").click(function(){
+		$(".confirm_box_form").fadeOut();
+	})
 	/* $( function() {
 		$( ".item_drop" ).draggable();
 		$( ".chair_box" ).droppable({
@@ -413,7 +457,7 @@ $$(document).on('pageInit', '.page[data-page="question1"]', function (e) {
 	    	console.log(ans1);
 	    	mainView.router.loadPage('question2.html');
 
-	    }else if(ui.position.left < -380){
+	    }else if(ui.position.left < 45){
 
 			$(".thumbs_down").addClass('thumb_scale');
 		
@@ -497,11 +541,9 @@ $$(document).on('pageInit', '.page[data-page="home"]', function (e) {
 $$(document).on('pageInit', '.page[data-page="question2"]', function (e) {
 
 	$('#goto_question3').click(function(){
-
 		if(validate==0){
-			alert("Selete a option");
+			$(".confirm_box").fadeIn();
 		}else{
-
 			mainView.router.loadPage('question3.html');
 		}
 	})
@@ -558,25 +600,16 @@ $$(document).on('pageInit', '.page[data-page="question3"]', function (e) {
 $$(document).on('pageInit', '.page[data-page="question4"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     //myApp.alert('Here comes About page');
-	
-
 	$('#goto_question5').click(function(){
-
-
-		console.log(ans4);
 		mainView.router.loadPage('question5.html');
 	})
-	
 })
-
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="question5"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     //myApp.alert('Here comes About page');
-	
 	$('.single-item').slick();
-	
 })
 
 $$(document).on('pageInit', '.page[data-page="question6"]', function (e) {
@@ -644,23 +677,9 @@ $$(document).on('pageInit', '.page[data-page="question10"]', function (e) {
 })
 
 
-$$(document).on('pageInit', '.page[data-page="pillar_screen"]', function (e) {
-
-		// before conditions
-		console.log('pilllar page called');
-
-		setTimeout(function() {
-			console.log(page);
-			mainView.router.loadPage(page+'.html');
-		}, 5000);
-})
-
 
 
 $$(document).on('pageInit', '.page[data-page="form"]', function (e) {
-
-	// alert('piller screen came');
-
 	if(ans1=="Yes" && ans2=="Body Spray" && ans3=="Others" && (ans4=="Shower" || ans4=="Zumba")){
 
 		// alert('condition1');
@@ -895,16 +914,24 @@ $$(document).on('pageInit', '.page[data-page="form"]', function (e) {
 		var mobile = $('#mobile').val();
 
 		if(name ==""){
-			myApp.alert("Name Field Required");
+			$(".confirm_box_form > .confirm_text").html("Please Enter Name.");
+			$(".confirm_box_form").fadeIn();
+			// myApp.alert("Name Field Required");
 			return false;
 		}else if(email==""){
-			myApp.alert("Email Field Required");
+			$(".confirm_box_form > .confirm_text").html("Please Enter Email Id.");
+			$(".confirm_box_form").fadeIn();
+			// myApp.alert("Email Field Required");
 			return false;
 		}else if(validateForm(email) == false){
-			myApp.alert("Email Not Valid");
+			$(".confirm_box_form > .confirm_text").html("Entered Email is not valid.");
+			$(".confirm_box_form").fadeIn();
+			// myApp.alert("Email Not Valid");
 			return false;
 		}else if(mobile==""){
-			myApp.alert("Mobile Field Required");
+			$(".confirm_box_form > .confirm_text").html("Please Enter Mobile Number");
+			$(".confirm_box_form").fadeIn();
+			// myApp.alert("Mobile Field Required");
 			return false;
 		}	
 
@@ -953,6 +980,19 @@ $$(document).on('pageInit', '.page[data-page="form"]', function (e) {
 
 	})
 
+})
+
+
+
+
+$$(document).on('pageInit', '.page[data-page="pillar_screen"]', function (e) {
+		// before conditions
+		console.log('pilllar page called');
+
+		setTimeout(function() {
+			console.log(page);
+			mainView.router.loadPage(page+'.html');
+		}, 5000);
 })
 
 
