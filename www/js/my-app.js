@@ -495,7 +495,7 @@ $$(document).on('pageInit', '.page[data-page="home"]', function (e) {
 				$.ajax({
 
 					type:"POST",
-					url:"http://kreaserv-tech.com/axe/insert.php",
+					url:"http://tonicww.com/axe/insert.php",
 					crossDomain:true,
 					data:{
 						data: send_data,
