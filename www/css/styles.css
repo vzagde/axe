@@ -682,11 +682,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     position: absolute;
     /* border: 1px solid red; */
     /* width: 100%; */
-    width: 89px;
-    height: 81px;
+    width: 242px;
+    height: 242px;
     margin: auto;
-    top: -10%;
-    left: 64%;
+    top: -42%;
+    left: 42%;
     right: 0;
     /* bottom: 18%; */
     bottom: 17%;
@@ -1116,7 +1116,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	letter-spacing:1px;
 	color:#fff;
 	text-align:right;
-	margin-right: 14%;
+	/*margin-right: 14%;*/
+	margin-right: 3%;
 	margin-top: 13%;
 	float:right;
 }
@@ -1206,7 +1207,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 .pillar_text2{
 	font-family: 'bebas_neueregular';
-	font-size:72px;
+	font-size:50px;
 	color:#fff;
 	text-align:center;
 }
