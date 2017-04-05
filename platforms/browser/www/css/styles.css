@@ -682,11 +682,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     position: absolute;
     /* border: 1px solid red; */
     /* width: 100%; */
-    width: 89px;
-    height: 81px;
+    width: 242px;
+    height: 242px;
     margin: auto;
-    top: -10%;
-    left: 64%;
+    top: -42%;
+    left: 42%;
     right: 0;
     /* bottom: 18%; */
     bottom: 17%;
@@ -731,32 +731,36 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 .spray_box > .b1{
-	position:absolute;
-	top: 3.4%;
-    left: 26%;
-	pointer-events:visible;
+    position: absolute;
+    top: 3.4%;
+    left: 7%;
+    pointer-events: visible;
+    padding: 0 20%;
 }
 
 .spray_box > .b2{
-	position:absolute;
-	top: 28%;
-    left: 48%;
-	pointer-events:visible;
+    position: absolute;
+    top: 28%;
+    left: 27%;
+    pointer-events: visible;
+    padding: 0 21%;
 }
 
 .b3{
-	position:absolute;
-	bottom: 23%;
-    left: 21%;
-	pointer-events:visible;
+    position: absolute;
+    bottom: 23%;
+    left: 9%;
+    pointer-events: visible;
+    padding: 0 12%;
 }
 
 .b4{
-	position:absolute;
-	bottom: 24%;
+    position: absolute;
+    bottom: 24%;
     /* right: 22%; */
-    right: 35%;
-	pointer-events:visible;
+    right: 25%;
+    pointer-events: visible;
+    padding: 0 10%;
 }
 
 .b_ab{
@@ -1116,7 +1120,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	letter-spacing:1px;
 	color:#fff;
 	text-align:right;
-	margin-right: 14%;
+	/*margin-right: 14%;*/
+	margin-right: 3%;
 	margin-top: 13%;
 	float:right;
 }
@@ -1206,7 +1211,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 .pillar_text2{
 	font-family: 'bebas_neueregular';
-	font-size:72px;
+	font-size:50px;
 	color:#fff;
 	text-align:center;
 }
