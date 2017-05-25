@@ -671,19 +671,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 } */
 
 .drop_box img{
-	position:absolute;
+/*	position:absolute;
 	margin:auto;
 	bottom:0;
 	left:0;
-	right:0;
+	right:0;*/
+	position: absolute;
+    margin: auto;
+    bottom: 50px;
+    left: -90px;
+    right: 0;
 }
 
 .drop_box {
     position: absolute;
     /* border: 1px solid red; */
     /* width: 100%; */
-    width: 242px;
-    height: 242px;
+    width: 330px;
+    height: 340px;
     margin: auto;
     top: -42%;
     left: 42%;
